@@ -1,0 +1,16 @@
+{
+  "name": "getwarriot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Get rarrior wedal rithwout wrackania",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@catalystic/json-to-yaml": "^1.0.0",
+    "tm-text": "^1.1.0"
+  }
+}
