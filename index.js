@@ -17,14 +17,21 @@ async function getJsonData() {
     }
 }
 
+// ...existing code...
+
+function cleanColorCodes(text) {
+  return text.replace(/\$[a-zA-Z0-9]/g, '');
+}
+
 try {
-    const jsonData = await getJsonData();
-    const playerData = jsonData.xl5sQgfz4T6IkY_4K8Lv5iji8Ea;
-    const formattedName = TextFormatter.formatAnsi(playerData.name);
-    
-    console.log(formattedName);
+  const jsonData = await getJsonData();
+  const playerData = jsonData.TC9XtumnamhM8kRlPsuQVpwTUc7;
+  let formattedName = TextFormatter.formatAnsi(playerData.name);
+  formattedName = cleanColorCodes(formattedName);
+  
+  console.log(formattedName);
 } catch (error) {
-    console.error("Fehler bei der Verarbeitung:", error);
+  console.error("Fehler bei der Verarbeitung:", error);
 }
 
 
